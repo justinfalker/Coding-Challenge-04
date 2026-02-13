@@ -43,3 +43,23 @@ if (customerType === "Student") {
 
 console.log("Customer Type:", customerType);
 console.log("Extra Discount: ", additionalDiscount);
+
+for (let customerNumber = 1; customerNumber <= 3; customerNumber++) {
+  let subtotal = 0;
+
+  for (const p of products) {
+    if (p.inventory > 0) {
+      subtotal += p.discountedPrice;
+      p.inventory -= 1; 
+    }
+  }
+
+  let total =
+    subtotal * (1 - additionalDiscount);
+
+  total = (total * 100) / 100;
+
+  console.log(
+    `Customer #${customerNumber} Total Cost: $${total.toFixed(2)}`
+  );
+}
