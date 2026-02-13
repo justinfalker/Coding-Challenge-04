@@ -21,7 +21,7 @@ const products = [
       discountRate = 0.1;
       break;
     default:
-      console.log("No discount for you!!");
+      discountRate = 0
   }
 
   p.discountedPrice = p.price * (1 - discountRate);
@@ -54,12 +54,26 @@ for (let customerNumber = 1; customerNumber <= 3; customerNumber++) {
     }
   }
 
-  let total =
-    subtotal * (1 - additionalDiscount);
-
-  total = (total * 100) / 100;
+  let total = subtotal * (1 - additionalDiscount);
 
   console.log(
     `Customer #${customerNumber} Total Cost: $${total.toFixed(2)}`
   );
+}
+
+const oneProduct = products[2]; 
+
+console.log("\n--- One Product ---");
+for (const key in oneProduct) {
+  console.log(`${key}: ${oneProduct[key]}`);
+}
+
+for (const p of products) {
+  console.log("\nProduct:");
+
+  for (const [key, value] of Object.entries(p)) {
+    console.log(`${key}: ${value}`);
+  }
+
+  console.log("-----");
 }
