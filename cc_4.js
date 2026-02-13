@@ -28,3 +28,18 @@ const products = [
 }
 
 console.log(products)
+
+const customerType = "Student"; 
+
+let additionalDiscount = 0;
+
+if (customerType === "Student") {
+  additionalDiscount = 0.05;
+} else if (customerType === "Senior") {
+  additionalDiscount = 0.07;
+} else {
+  additionalDiscount = 0;
+}
+
+console.log("Customer Type:", customerType);
+console.log("Extra Discount: ", additionalDiscount);
