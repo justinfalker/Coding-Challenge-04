@@ -63,10 +63,12 @@ for (let customerNumber = 1; customerNumber <= 3; customerNumber++) {
 
 const oneProduct = products[2]; 
 
-console.log("\n--- One Product ---");
+console.log("\n--- One Product (Oreos) ---");
 for (const key in oneProduct) {
   console.log(`${key}: ${oneProduct[key]}`);
 }
+
+console.log("\n------ Updated Product Info after Inventory Update -----")
 
 for (const p of products) {
   console.log("\nProduct:");
